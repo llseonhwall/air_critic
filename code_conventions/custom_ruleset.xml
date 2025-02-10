@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="MyCustomRuleset" xmlns="http://pmd.sourceforge.net/ruleset_2_0_0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset_2_0_0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+         
+    <description>My custom rules for code quality.</description>
+
+    <rule name="ClassNaming" class="net.sourceforge.pmd.lang.java.rule.naming.ClassNaming">
+        <description>Checks that class names follow PascalCase naming convention.</description>
+        <properties>
+            <property name="format" value="PascalCase"/>
+        </properties>
+    </rule>
+
+    <rule name="MethodNaming" class="net.sourceforge.pmd.lang.java.rule.naming.MethodNaming">
+        <description>Checks that method names follow camelCase naming convention.</description>
+        <properties>
+            <property name="format" value="camelCase"/>
+        </properties>
+    </rule>
+
+    <rule name="VariableNaming" class="net.sourceforge.pmd.lang.java.rule.naming.VariableNaming">
+        <description>Checks that variable names follow camelCase naming convention.</description>
+        <properties>
+            <property name="format" value="camelCase"/>
+        </properties>
+    </rule>
+
+    <rule name="ConstantNaming" class="net.sourceforge.pmd.lang.java.rule.naming.ConstantNaming">
+        <description>Checks that constant names follow UPPER_SNAKE_CASE naming convention.</description>
+        <properties>
+            <property name="format" value="UPPER_SNAKE_CASE"/>
+        </properties>
+    </rule>
+
+    <rule name="ExcessiveMethodLength" class="net.sourceforge.pmd.lang.java.rule.codesize.ExcessiveMethodLength">
+        <description>Checks for methods that exceed a specified number of lines.</description>
+        <properties>
+            <property name="maxLines" value="100"/>
+        </properties>
+    </rule>
+
+    <rule name="EmptyDocstring" class="net.sourceforge.pmd.lang.java.rule.documentation.EmptyDocstring">
+        <description>Checks for empty docstrings in methods.</description>
+        <properties>
+            <property name="required" value="true"/>
+        </properties>
+    </rule>
+
+    <rule name="SortImports" class="net.sourceforge.pmd.lang.java.rule.imports.SortImports">
+        <description>Checks that imports are sorted.</description>
+        <properties>
+            <property name="required" value="true"/>
+        </properties>
+    </rule>
+
+    <rule name="AccessModifier" class="net.sourceforge.pmd.lang.java.rule.design.AccessModifier">
+        <description>Checks that access modifiers are explicitly defined.</description>
+        <properties>
+            <property name="accessModifier" value="explicit"/>
+        </properties>
+    </rule>
+
+    <!-- 추가 규칙들... -->
+</ruleset>
